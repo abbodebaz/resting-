@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03384c">
+  <title>بيت الإباء | تقييم الخدمة</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+</head>
+<body>
+  <section class="survey">
+    <div class="survey-shell">
+      <div class="page-tools">
+        <a class="page-home" href="index.html">← مركز المحاكاة</a>
+      </div>
+
+      <div class="survey-top">
+        <img class="logo" src="https://seeklogo.com/images/B/bayt-alebaa-logo-796478BBCD-seeklogo.com.png" alt="بيت الإباء">
+        <span class="secure">🔒 تقييم آمن ومخصص لطلبك</span>
+      </div>
+
+      <div class="card" id="surveyCard">
+        <div class="hero">
+          <span class="pill">خدمات ما بعد البيع</span>
+          <h1>كيف كانت تجربتك معنا؟</h1>
+          <p>رأيك يساعدنا نرفع جودة الخدمة ونطور تجربة بيت الإباء.</p>
+
+          <div class="meta">
+            <div><small>رقم الطلب</small><strong>SV-41872</strong></div>
+            <div><small>نوع الخدمة</small><strong>تركيب</strong></div>
+            <div><small>المدينة</small><strong>جدة</strong></div>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span id="stepText">الخطوة 1 من 3</span>
+            <span id="percent">33%</span>
+          </div>
+          <div class="progress"><span id="progress"></span></div>
+        </div>
+
+        <div class="body">
+          <div class="step active" data-step="1">
+            <div class="kicker">التقييم العام</div>
+            <div class="title">كيف تقيم تجربتك بشكل عام؟</div>
+            <div class="help">اختر عدد النجوم الأقرب لتجربتك.</div>
+
+            <div class="stars" id="stars"></div>
+            <div class="rating-copy" id="ratingCopy">لم يتم اختيار تقييم بعد</div>
+
+            <div class="reason" id="reason">
+              <b>نأسف أن تجربتك لم تكن بالمستوى المطلوب.</b>
+              <div style="font-size:11px;color:var(--muted);margin-top:3px">ما السبب الرئيسي؟</div>
+              <div class="chips">
+                <button class="chip" type="button">التأخر عن الموعد</button>
+                <button class="chip" type="button">جودة التركيب</button>
+                <button class="chip" type="button">تعامل الفريق</button>
+                <button class="chip" type="button">عدم حل المشكلة</button>
+                <button class="chip" type="button">أخرى</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="step" data-step="2">
+            <div class="kicker">تفاصيل الخدمة</div>
+            <div class="title">ساعدنا نفهم التجربة بشكل أدق</div>
+
+            <div class="q">
+              <h3>طريقة التواصل والاحترافية</h3>
+              <div class="scale" data-q="communication"></div>
+            </div>
+
+            <div class="q">
+              <h3>جودة العمل المنفذ</h3>
+              <div class="scale" data-q="quality"></div>
+            </div>
+
+            <div class="q">
+              <h3>الالتزام بالموعد</h3>
+              <div class="scale" data-q="punctuality"></div>
+            </div>
+          </div>
+
+          <div class="step" data-step="3">
+            <div class="kicker">ملاحظتك</div>
+            <div class="title">هل تحب تضيف شيء؟</div>
+            <div class="help">اختياري — اكتب ملاحظتك أو اقتراحك.</div>
+            <textarea id="comment" maxlength="500" placeholder="اكتب ملاحظتك هنا..."></textarea>
+            <div class="counter"><span id="count">0</span> / 500</div>
+          </div>
+
+          <div class="actions">
+            <button class="btn secondary" id="prev" type="button" style="visibility:hidden">السابق</button>
+            <button class="btn primary" id="next" type="button">التالي ←</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/survey.js" defer></script>
+</body>
+</html>
