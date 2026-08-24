@@ -400,9 +400,9 @@ function renderFinal() {
       </div>
 
       <div class="measure-card">
-        <div class="measure-head"><b>كم كان الحصول على الخدمة سهلًا بالنسبة لك؟</b><span>CES</span></div>
+        <div class="measure-head"><b>بشكل عام، كيف كانت سهولة طلب الخدمة ومتابعتها؟</b><span>CES</span></div>
         <div class="ces-grid">
-          ${[['1','صعب جدًا'],['2','صعب'],['3','مقبول'],['4','سهل'],['5','سهل جدًا']].map(([value,label]) => `<button class="ces-option ${String(state.ces) === value ? 'on' : ''}" type="button" data-ces="${value}"><span>${value}</span>${label}</button>`).join('')}
+          ${[['1','صعبة جدًا'],['2','صعبة'],['3','مقبولة'],['4','سهلة'],['5','سهلة جدًا']].map(([value,label]) => `<button class="ces-option ${String(state.ces) === value ? 'on' : ''}" type="button" data-ces="${value}"><span>${value}</span>${label}</button>`).join('')}
         </div>
       </div>
 
