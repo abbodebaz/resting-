@@ -3,115 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#03384c">
-  <title>بيت الإباء | إجابات العملاء</title>
-
+  <meta name="theme-color" content="#063c50">
+  <meta name="description" content="مركز تجربة العملاء لخدمات ما بعد البيع في بيت الإباء">
+  <title>بيت الإباء | مركز تجربة العملاء</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/responses.css">
 </head>
 <body>
-  <section class="admin">
+  <div class="cx-app">
     <aside class="sidebar">
-      <div class="side-logo">
-        <img class="logo" src="logo.png" alt="بيت الإباء">
-      </div>
-
-      <div class="product">
-        <strong>تجربة ما بعد البيع</strong>
-        <small>Customer Experience</small>
-      </div>
-
-      <div class="nav">
-        <a href="reports.html">لوحة التقارير</a>
-        <a class="on" href="responses.html">إجابات العملاء <span class="num">273</span></a>
-      </div>
-
-      <div class="side-user">
-        مدير تجربة العملاء<br>
-        <span style="color:#9fbfc9">Odoo Integration Demo</span>
-      </div>
+      <div class="side-logo"><img src="logo.png" alt="بيت الإباء"></div>
+      <div class="product"><strong>مركز تجربة العملاء</strong><small>After-Sales CX Operations</small></div>
+      <nav class="nav">
+        <a href="reports.html"><span>لوحة التقارير</span></a>
+        <a class="on" href="responses.html"><span>مركز الإجابات</span><span class="num" id="sideCount">18</span></a>
+      </nav>
+      <div class="side-foot"><b>مدير تجربة العملاء</b>بيانات تجريبية · Odoo Integration Demo</div>
     </aside>
 
-    <div class="page-tools">
-      <a class="page-home" href="index.html">← مركز المحاكاة</a>
-    </div>
-
-    <main class="main">
-      <div class="top">
-        <div>
-          <h1>إجابات العملاء</h1>
-          <p>كل تقييم مرتبط بالطلب، المدينة، نوع الخدمة والفريق.</p>
-        </div>
-        <span class="pill">آخر تحديث: الآن</span>
-      </div>
-
-      <div class="kpis">
-        <div class="kpi"><small>إجمالي الإجابات</small><strong>1,284</strong><em>↑ 12% هذا الشهر</em></div>
-        <div class="kpi"><small>متوسط التقييم</small><strong>4.52</strong><em>↑ 0.18 نقطة</em></div>
-        <div class="kpi"><small>Response Rate</small><strong>34%</strong><em>↑ 5.2%</em></div>
-        <div class="kpi"><small>تحتاج متابعة</small><strong>18</strong><em style="color:var(--bad)">6 حالات حرجة</em></div>
-      </div>
-
-      <div class="filters" style="margin-bottom:12px">
-        <input id="search" placeholder="بحث بالعميل أو الطلب">
-        <select id="city">
-          <option value="">كل المدن</option>
-          <option>جدة</option>
-          <option>الرياض</option>
-          <option>الدمام</option>
-          <option>مكة</option>
-        </select>
-        <select id="service">
-          <option value="">كل الخدمات</option>
-          <option>تركيب</option>
-          <option>توصيل</option>
-          <option>صيانة</option>
-        </select>
-        <select id="rating">
-          <option value="">كل التقييمات</option>
-          <option value="5">5 نجوم</option>
-          <option value="4">4 نجوم</option>
-          <option value="low">1–2 نجمة</option>
-        </select>
-      </div>
-
-      <div class="response-layout">
-        <div class="panel">
-          <div class="panel-head">
-            <h2>آخر الإجابات</h2>
-            <span id="resultCount" class="pill">8 إجابات تجريبية</span>
+    <main class="workspace">
+      <div class="workspace-shell">
+        <header class="topbar">
+          <div class="title-wrap">
+            <div class="title-icon">◎</div>
+            <div><h1>مركز تجربة العملاء</h1><p>تابع تقييمات العملاء، الحالات الحرجة، SLA وإجراءات المعالجة من مكان واحد.</p></div>
           </div>
+          <div class="top-actions">
+            <span class="live-pill"><span class="live-dot"></span> آخر تحديث: الآن</span>
+            <button class="icon-btn" id="simulateNew" type="button">＋ محاكاة تقييم جديد</button>
+            <a class="home-link" href="index.html">← مركز المحاكاة</a>
+          </div>
+        </header>
 
+        <section class="notice-bar" aria-label="التنبيهات التشغيلية">
+          <div class="notice bad"><div class="nicon">!</div><div><b>3 تقييمات حرجة جديدة</b><span>تحتاج مراجعة فورية من فريق تجربة العملاء.</span></div></div>
+          <div class="notice warn"><div class="nicon">◷</div><div><b>حالتان تجاوزتا SLA</b><span>أقدم حالة متأخرة منذ 3 ساعات و12 دقيقة.</span></div></div>
+          <div class="notice"><div class="nicon">☎</div><div><b>5 عملاء طلبوا التواصل</b><span>3 منهم يفضلون التواصل مساءً.</span></div></div>
+        </section>
+
+        <section class="kpis">
+          <div class="kpi"><small>إجابات اليوم</small><strong id="kpiToday">27</strong><em>+12 منذ أمس</em></div>
+          <div class="kpi"><small>تحتاج متابعة</small><strong id="kpiFollowup">18</strong><em class="warn">6 حرجة</em></div>
+          <div class="kpi"><small>تجاوزت SLA</small><strong id="kpiOverdue">2</strong><em class="bad">تحتاج تدخل</em></div>
+          <div class="kpi"><small>متوسط وقت الحل</small><strong>3س 18د</strong><em>↓ 24 دقيقة</em></div>
+          <div class="kpi"><small>متوسط التقييم</small><strong id="kpiScore">4.21</strong><em>↑ 0.11 نقطة</em></div>
+        </section>
+
+        <div class="tabs" id="statusTabs">
+          <button class="tab on" type="button" data-tab="all">الكل <b id="tabAll">8</b></button>
+          <button class="tab" type="button" data-tab="جديد">جديدة <b id="tabNew">0</b></button>
+          <button class="tab" type="button" data-tab="followup">تحتاج متابعة <b id="tabFollowup">0</b></button>
+          <button class="tab" type="button" data-tab="critical">حرجة <b id="tabCritical">0</b></button>
+          <button class="tab" type="button" data-tab="تم الحل">تم الحل <b id="tabSolved">0</b></button>
+        </div>
+
+        <section class="toolbar">
+          <div class="searchbox"><span>⌕</span><input id="search" placeholder="بحث بالعميل، الجوال، الطلب، الفاتورة أو الفريق"></div>
+          <select id="city"><option value="">كل المدن</option><option>جدة</option><option>الرياض</option><option>الدمام</option><option>مكة</option></select>
+          <select id="service"><option value="">كل الخدمات</option><option>تركيب</option><option>توصيل</option><option>صيانة</option></select>
+          <select id="rating"><option value="">كل التقييمات</option><option value="5">5 نجوم</option><option value="4">4 نجوم</option><option value="3">3 نجوم</option><option value="low">1–2 نجمة</option></select>
+          <select id="priority"><option value="">كل الأولويات</option><option value="critical">حرجة</option><option value="high">عالية</option><option value="medium">متوسطة</option><option value="positive">إيجابية</option></select>
+          <select id="sort"><option value="newest">الأحدث</option><option value="lowest">الأقل تقييمًا</option><option value="priority">الأعلى خطورة</option><option value="sla">أقرب SLA</option></select>
+          <button class="clear-btn" id="clearFilters" type="button">مسح الفلاتر</button>
+          <span class="result-label" id="resultCount">0 نتيجة</span>
+        </section>
+
+        <div class="bulkbar" id="bulkbar">
+          <strong><span id="selectedCount">0</span> محددة</strong>
+          <select id="bulkAssignee"><option value="">تعيين مسؤول...</option><option>أحمد السلمي</option><option>سارة الغامدي</option><option>خالد الزهراني</option></select>
+          <button id="bulkStatus" type="button">قيد المراجعة</button>
+          <button id="bulkExport" type="button">تصدير المحدد</button>
+          <button id="bulkClear" type="button">إلغاء التحديد</button>
+        </div>
+
+        <section class="inbox">
+          <div class="inbox-head"><div><h2>صندوق الحالات</h2><small>بيانات تجريبية لمحاكاة التشغيل</small></div><span class="live-pill"><span class="live-dot"></span> Live Demo</span></div>
           <div class="table-wrap">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>العميل</th>
-                  <th>الخدمة</th>
-                  <th>المدينة</th>
-                  <th>الفريق</th>
-                  <th>التقييم</th>
-                  <th>الحالة</th>
-                  <th></th>
-                </tr>
-              </thead>
+            <table class="response-table">
+              <thead><tr><th><input class="check" id="selectAll" type="checkbox" aria-label="تحديد الكل"></th><th>العميل / الطلب</th><th>الخدمة</th><th>التقييم</th><th>المشكلة</th><th>الحالة</th><th>المسؤول</th><th>SLA</th><th></th></tr></thead>
               <tbody id="tbody"></tbody>
             </table>
           </div>
-
           <div class="mobile-list" id="mobileList"></div>
-        </div>
-
-        <div class="panel detail" id="detail">
-          <div style="text-align:center;padding:130px 20px;color:var(--muted)">اختر إجابة لعرض تفاصيلها</div>
-        </div>
+        </section>
       </div>
     </main>
-  </section>
+  </div>
 
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head"><div><h2 id="drawerTitle">تفاصيل الحالة</h2><p id="drawerSubtitle"></p></div><button class="close-btn" id="closeDrawer" type="button" aria-label="إغلاق">×</button></div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="assets/js/responses.js" defer></script>
 </body>
 </html>
