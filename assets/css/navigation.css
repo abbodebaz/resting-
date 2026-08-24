@@ -35,12 +35,42 @@
   padding-right:28px;
 }
 
+.nav a{
+  display:block;
+  color:#bad0d7;
+  padding:11px 12px;
+  border-radius:12px;
+  text-align:right;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.nav a.on,
+.nav a:hover{
+  background:rgba(255,255,255,.1);
+  color:#fff;
+}
+
+.nav a .num{
+  float:left;
+  background:#fff;
+  color:var(--b);
+  border-radius:99px;
+  padding:1px 7px;
+}
+
 @media(max-width:900px){
   .page-tools,
   .admin .page-tools{
     padding:12px 14px 0;
   }
+
   .survey .page-tools{
     padding:0 0 10px;
+  }
+
+  .nav a{
+    padding:9px;
+    font-size:12px;
   }
 }
