@@ -3,141 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#03384c">
-  <title>بيت الإباء | التقارير</title>
-
+  <meta name="theme-color" content="#063c50">
+  <meta name="description" content="لوحة ذكاء تجربة العملاء لخدمات ما بعد البيع في بيت الإباء">
+  <title>بيت الإباء | لوحة تجربة العملاء</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/reports.css?v=20260824-1535">
 </head>
 <body>
-  <section class="admin">
+  <div class="report-app">
     <aside class="sidebar">
-      <div class="side-logo">
-        <img class="logo" src="logo.png" alt="بيت الإباء">
-      </div>
-
-      <div class="product">
-        <strong>تجربة ما بعد البيع</strong>
-        <small>Customer Experience</small>
-      </div>
-
-      <div class="nav">
-        <a class="on" href="reports.html">لوحة التقارير</a>
-        <a href="responses.html">إجابات العملاء <span class="num">273</span></a>
-      </div>
-
-      <div class="side-user">
-        مدير تجربة العملاء<br>
-        <span style="color:#9fbfc9">Odoo Integration Demo</span>
-      </div>
+      <div class="side-logo"><img src="logo.png" alt="بيت الإباء"></div>
+      <div class="product"><strong>ذكاء تجربة العملاء</strong><small>Executive CX Intelligence</small></div>
+      <nav class="nav">
+        <a class="on" href="reports.html"><span>لوحة التقارير</span></a>
+        <a href="responses.html"><span>مركز الإجابات</span><span class="num">18</span></a>
+      </nav>
+      <div class="side-foot"><b>مدير تجربة العملاء</b>بيانات تجريبية · Odoo Integration Demo</div>
     </aside>
 
-    <div class="page-tools">
-      <a class="page-home" href="index.html">← مركز المحاكاة</a>
-    </div>
-
-    <main class="main">
-      <div class="top">
-        <div>
-          <h1>لوحة تجربة العملاء</h1>
-          <p>صورة تنفيذية لأداء خدمات ما بعد البيع — آخر 30 يوم.</p>
-        </div>
-
-        <div class="filters">
-          <select>
-            <option>آخر 30 يوم</option>
-            <option>آخر 90 يوم</option>
-          </select>
-          <select>
-            <option>كل المدن</option>
-            <option>جدة</option>
-            <option>الرياض</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="kpis">
-        <div class="kpi"><small>CSAT</small><strong>88.4%</strong><em>↑ 3.1%</em></div>
-        <div class="kpi"><small>متوسط التقييم</small><strong>4.52 / 5</strong><em>↑ 0.18</em></div>
-        <div class="kpi"><small>معدل الاستجابة</small><strong>34%</strong><em>↑ 5.2%</em></div>
-        <div class="kpi"><small>حالات حرجة</small><strong>6</strong><em style="color:var(--bad)">تحتاج تدخل</em></div>
-      </div>
-
-      <div class="grid">
-        <div class="panel">
-          <div class="panel-head">
-            <h2>اتجاه رضا العملاء</h2>
-            <span class="pill good">تحسن مستمر</span>
+    <main class="workspace">
+      <div class="shell">
+        <header class="topbar">
+          <div class="title-wrap">
+            <div class="title-icon">↗</div>
+            <div><h1>لوحة تجربة العملاء</h1><p>صورة تنفيذية موحدة لأداء خدمات ما بعد البيع واتجاهات الرضا والمعالجة.</p></div>
           </div>
-
-          <div class="linechart">
-            <svg viewBox="0 0 760 235" preserveAspectRatio="none" aria-label="اتجاه رضا العملاء">
-              <defs>
-                <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#03384c" stop-opacity=".2"/>
-                  <stop offset="1" stop-color="#03384c" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <line class="gridline" x1="18" y1="35" x2="742" y2="35"/>
-              <line class="gridline" x1="18" y1="105" x2="742" y2="105"/>
-              <line class="gridline" x1="18" y1="175" x2="742" y2="175"/>
-              <path class="area" d="M18 172 L78 155 L138 160 L198 128 L258 139 L318 111 L378 98 L438 119 L498 87 L558 103 L618 70 L678 82 L742 94 L742 210 L18 210 Z"/>
-              <path class="line" d="M18 172 L78 155 L138 160 L198 128 L258 139 L318 111 L378 98 L438 119 L498 87 L558 103 L618 70 L678 82 L742 94"/>
-              <circle class="dotc" cx="198" cy="128" r="4"/>
-              <circle class="dotc" cx="378" cy="98" r="4"/>
-              <circle class="dotc" cx="618" cy="70" r="4"/>
-              <circle class="dotc" cx="742" cy="94" r="4"/>
-            </svg>
+          <div class="top-actions">
+            <span class="demo-pill">بيانات تجريبية</span>
+            <span class="live-pill"><span class="live-dot"></span> آخر تحديث: الآن</span>
+            <button class="action-btn" id="exportCsv" type="button">تصدير CSV</button>
+            <button class="action-btn" id="printReport" type="button">طباعة / PDF</button>
+            <button class="action-btn primary" id="monthlyReport" type="button">إرسال التقرير الشهري</button>
+            <a class="home-link" href="index.html">← مركز المحاكاة</a>
           </div>
-        </div>
+        </header>
 
-        <div class="panel">
-          <div class="panel-head">
-            <h2>الأداء حسب المدينة</h2>
-            <span class="pill">4 مدن</span>
-          </div>
+        <section class="filterbar">
+          <span class="filter-label">نطاق التقرير: <b id="filterLabel">آخر 30 يوم</b></span>
+          <select id="period"><option value="30">آخر 30 يوم</option><option value="90">آخر 90 يوم</option><option value="7">آخر 7 أيام</option></select>
+          <select id="cityFilter"><option value="">كل المدن</option><option>جدة</option><option>الرياض</option><option>الدمام</option><option>مكة</option></select>
+          <select id="serviceFilter"><option value="">كل الخدمات</option><option>تركيب</option><option>توصيل</option><option>صيانة</option></select>
+          <select id="teamFilter"><option value="">كل الفرق</option></select>
+          <button class="reset-btn" id="resetFilters" type="button">إعادة الضبط</button>
+        </section>
 
-          <div class="bars">
-            <div class="barrow"><span>مكة</span><div class="track"><div class="fill" style="width:94%"></div></div><b>4.7</b></div>
-            <div class="barrow"><span>الدمام</span><div class="track"><div class="fill" style="width:92%"></div></div><b>4.6</b></div>
-            <div class="barrow"><span>الرياض</span><div class="track"><div class="fill" style="width:90%"></div></div><b>4.5</b></div>
-            <div class="barrow"><span>جدة</span><div class="track"><div class="fill" style="width:86%"></div></div><b>4.3</b></div>
+        <section class="executive">
+          <div class="brief">
+            <div class="brief-top"><span class="ai-badge">✦ Executive AI Brief · Demo</span><span class="live-pill">تحليل تنفيذي</span></div>
+            <h2>ملخص الفترة</h2>
+            <p id="briefText">جاري بناء الملخص التنفيذي...</p>
+            <div class="brief-cards">
+              <div class="brief-mini"><small>أفضل نقطة أداء</small><b id="briefBest">—</b></div>
+              <div class="brief-mini"><small>أكبر فرصة للتحسين</small><b id="briefProblem">—</b></div>
+              <div class="brief-mini"><small>الإجراء المقترح</small><b id="briefAction">—</b></div>
+            </div>
+            <a class="brief-action" id="briefLink" href="responses.html">فتح الحالات المرتبطة ←</a>
           </div>
-        </div>
-      </div>
+          <div class="changes">
+            <h3>ما الذي تغيّر؟</h3>
+            <div class="change-list">
+              <div class="change"><span>CSAT</span><b class="up" id="changeCsat">↑ 3.1%</b></div>
+              <div class="change"><span>NPS</span><b class="up" id="changeNps">↑ 7 نقاط</b></div>
+              <div class="change"><span>شكاوى التأخير</span><b class="down" id="changeDelay">↑ 12%</b></div>
+              <div class="change"><span>متوسط وقت الحل</span><b class="up" id="changeResolution">↓ 24 دقيقة</b></div>
+            </div>
+          </div>
+        </section>
 
-      <div class="grid">
-        <div class="panel">
-          <div class="panel-head">
-            <h2>أكثر أسباب عدم الرضا</h2>
-            <span class="pill warn">من التقييمات المنخفضة</span>
-          </div>
+        <section class="kpis">
+          <div class="kpi"><small>CSAT</small><strong id="kpiCsat">—</strong><em>رضا العملاء</em></div>
+          <div class="kpi"><small>متوسط التقييم</small><strong id="kpiRating">—</strong><em>من 5</em></div>
+          <div class="kpi"><small>NPS</small><strong id="kpiNps">—</strong><em>درجة التوصية</em></div>
+          <div class="kpi"><small>CES</small><strong id="kpiCes">—</strong><em>سهولة الخدمة</em></div>
+          <div class="kpi"><small>معدل الاستجابة</small><strong id="kpiResponse">—</strong><em>من الروابط المرسلة</em></div>
+          <div class="kpi"><small>Recovery Rate</small><strong id="kpiRecovery">—</strong><em>الحالات السلبية المعالجة</em></div>
+          <div class="kpi"><small>حالات حرجة</small><strong id="kpiCritical">—</strong><em class="bad">تحتاج مراقبة</em></div>
+        </section>
 
-          <div class="reasons">
-            <div class="reason-card"><strong>38%</strong><span>التأخر عن الموعد</span></div>
-            <div class="reason-card"><strong>24%</strong><span>جودة التركيب</span></div>
-            <div class="reason-card"><strong>19%</strong><span>التواصل مع العميل</span></div>
-            <div class="reason-card"><strong>11%</strong><span>عدم حل المشكلة</span></div>
+        <section class="grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div><h2>اتجاه تجربة العملاء</h2><p>مقارنة الفترة الحالية بالفترة السابقة.</p></div>
+              <div class="panel-tools">
+                <button class="metric-btn on" data-metric="csat" type="button">CSAT</button>
+                <button class="metric-btn" data-metric="rating" type="button">التقييم</button>
+                <button class="metric-btn" data-metric="nps" type="button">NPS</button>
+                <button class="metric-btn" data-metric="ces" type="button">CES</button>
+              </div>
+            </div>
+            <div class="chart-wrap" id="trendChart"></div>
+            <div class="chart-labels" id="trendLabels"></div>
+            <div class="chart-legend"><span><i class="legend-dot"></i> الفترة الحالية</span><span><i class="legend-dot prev"></i> الفترة السابقة</span></div>
           </div>
-        </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>تحليل NPS</h2><p>Promoters / Passives / Detractors</p></div></div>
+            <div class="nps-score"><strong id="npsScore">—</strong><span>Net Promoter Score</span></div>
+            <div class="nps-bars" id="npsBars"></div>
+          </div>
+        </section>
 
-        <div class="panel">
-          <div class="panel-head">
-            <h2>تنبيهات ذكية</h2>
-            <span class="pill">AI Insights</span>
+        <section class="grid">
+          <div class="panel">
+            <div class="panel-head"><div><h2>Heatmap المدينة × الخدمة</h2><p>اضغط على أي خلية للانتقال للحالات المرتبطة.</p></div><span class="demo-pill">Drill-down</span></div>
+            <div class="heatmap" id="heatmap"></div>
           </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>ترتيب الفرق</h2><p>الترتيب حسب متوسط تقييم العملاء.</p></div></div>
+            <div class="rank-list" id="teamRanking"></div>
+          </div>
+        </section>
 
-          <div class="insights">
-            <div class="insight">🔴 <b>جدة — فريق 02:</b> انخفاض الالتزام بالمواعيد 14% خلال أسبوعين.</div>
-            <div class="insight">🟠 <b>التركيب:</b> التأخير يمثل 42% من الشكاوى الأخيرة.</div>
-            <div class="insight">🟢 <b>الصيانة:</b> تحسن متوسط الرضا من 4.1 إلى 4.6.</div>
+        <section class="grid equal">
+          <div class="panel">
+            <div class="panel-head"><div><h2>أسباب عدم الرضا</h2><p>أكثر الأسباب تكرارًا واتجاهها مقارنة بالفترة السابقة.</p></div></div>
+            <div class="reason-list" id="reasonList"></div>
+            <div class="correlation" id="correlation"></div>
           </div>
-        </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>توزيع النجوم</h2><p>توزيع الإجابات حسب التقييم العام.</p></div></div>
+            <div class="stars-dist" id="starDistribution"></div>
+          </div>
+        </section>
+
+        <section class="grid equal">
+          <div class="panel">
+            <div class="panel-head"><div><h2>Customer Recovery Funnel</h2><p>من التقييم السلبي حتى إغلاق الحالة.</p></div></div>
+            <div class="funnel" id="recoveryFunnel"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>أداء SLA</h2><p>سرعة الاستجابة وحل الحالات السلبية.</p></div></div>
+            <div class="sla-donut-wrap">
+              <div class="donut" id="slaDonut" style="--sla:92%"><div class="donut-content"><strong>—</strong><span>داخل SLA</span></div></div>
+              <div class="sla-stats" id="slaStats"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid equal">
+          <div class="panel">
+            <div class="panel-head"><div><h2>اكتمال الخدمة</h2><p>هل اكتملت الخدمة بالشكل المطلوب حسب رأي العميل؟</p></div></div>
+            <div class="resolution-grid" id="resolutionGrid"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><h2>Response Funnel</h2><p>من إرسال رابط التقييم إلى إكماله.</p></div></div>
+            <div class="response-funnel" id="responseFunnel"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><div><h2>AI Insights & Recommended Actions</h2><p>استنتاجات تجريبية مبنية على بيانات النموذج الحالي.</p></div><span class="ai-badge" style="color:var(--brand);border-color:var(--line);background:var(--soft)">AI Analysis · Demo</span></div>
+          <div class="insight-grid" id="insightGrid"></div>
+        </section>
+
+        <div class="footer-note">Prototype · Bayt Alebaa After-Sales Customer Experience Intelligence · جميع الأرقام الحالية بيانات تجريبية للعرض</div>
       </div>
     </main>
-  </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/reports.js?v=20260824-1535" defer></script>
 </body>
 </html>
