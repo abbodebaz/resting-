@@ -99,6 +99,18 @@
   </aside>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const set = (id, key) => { const value = params.get(key); if (value && document.getElementById(id)) document.getElementById(id).value = value; };
+      set('city', 'city');
+      set('service', 'service');
+      set('priority', 'priority');
+      set('rating', 'rating');
+      const team = params.get('team');
+      if (team) document.getElementById('search').value = team;
+    })();
+  </script>
   <script src="assets/js/responses.js?v=20260824-1532" defer></script>
 </body>
 </html>
