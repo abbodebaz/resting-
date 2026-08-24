@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#063c50">
+  <meta name="description" content="تقييم تجربة خدمات ما بعد البيع في بيت الإباء">
   <title>بيت الإباء | قيّم تجربتك</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,126 +15,67 @@
 <body>
   <section class="survey-app">
     <header class="topbar">
-      <a class="demo-back" href="index.html">← مركز المحاكاة</a>
+      <a class="demo-back" href="index.html" aria-label="العودة إلى مركز المحاكاة">← مركز المحاكاة</a>
       <img class="logo" src="logo.png" alt="بيت الإباء">
-      <span class="secure"><span class="secure-dot"></span> تقييم آمن ومخصص لطلبك</span>
+      <span class="secure"><span class="secure-dot"></span> رابط تقييم آمن</span>
     </header>
 
     <main class="survey-shell">
       <article class="survey-card" id="surveyCard">
-        <div class="hero">
+        <section class="hero" id="heroSection">
           <div class="eyebrow">خدمات ما بعد البيع · Customer Experience</div>
-          <h1>كيف كانت تجربتك معنا؟</h1>
-          <p class="hero-copy">تقييمك يستغرق أقل من 30 ثانية ويساعدنا نطوّر الخدمة بشكل أفضل.</p>
+          <h1 id="helloName">أهلًا محمد 👋</h1>
+          <p class="hero-copy" id="servicePrompt">كيف كانت تجربة التركيب الأخيرة مع بيت الإباء؟</p>
+          <p class="time-copy">التقييم مصمم ليكون سريعًا — غالبًا أقل من دقيقة.</p>
 
           <div class="context-line" aria-label="تفاصيل الخدمة">
-            <b>تركيب</b><span class="dot">·</span>
-            <span>جدة</span><span class="dot">·</span>
-            <span>#SV-41872</span><span class="dot">·</span>
-            <span>فاتورة #INV-803214</span>
+            <span id="serviceMeta">تركيب</span><span class="dot">·</span>
+            <span id="cityMeta">جدة</span><span class="dot">·</span>
+            <span id="orderMeta">#SV-41872</span><span class="dot">·</span>
+            <span id="invoiceMeta">فاتورة #INV-803214</span><span class="dot">·</span>
+            <span id="dateMeta">تم التنفيذ: 23 أغسطس 2026</span>
+          </div>
+        </section>
+
+        <div class="resume-banner hidden" id="resumeBanner">
+          <div>
+            <b>عندك تقييم غير مكتمل</b>
+            <span>نقدر نكمل من المكان اللي وقفت عنده.</span>
+          </div>
+          <div class="resume-actions">
+            <button class="text-btn" id="restartDraft" type="button">ابدأ من جديد</button>
+            <button class="mini-btn" id="resumeDraft" type="button">كمّل التقييم</button>
           </div>
         </div>
 
-        <div class="progress-area">
+        <div class="progress-area" id="progressArea">
           <div class="progress-meta">
-            <span id="stepText">الخطوة 1 من 3</span>
-            <span id="percent">33%</span>
+            <span id="timeHint">باقي أقل من 40 ثانية</span>
+            <span id="progressText">25%</span>
           </div>
-          <div class="progress-track"><span class="progress-bar" id="progress"></span></div>
+          <div class="progress-dots" id="progressDots" aria-label="تقدم التقييم"></div>
+          <div class="progress-track"><span class="progress-bar" id="progressBar"></span></div>
         </div>
 
-        <div class="form-body">
-          <section class="step active" data-panel="overall">
-            <div class="step-kicker">التقييم العام</div>
-            <h2 class="step-title">كيف تقيم تجربتك بشكل عام؟</h2>
-            <p class="step-help">اختر عدد النجوم الأقرب لتجربتك، وبنكمّل لك الأسئلة المناسبة تلقائيًا.</p>
-
-            <div class="rating-stage">
-              <div class="stars" id="stars" aria-label="اختر تقييمًا من نجمة إلى خمس نجوم"></div>
-              <div class="rating-copy" id="ratingCopy">اختر تقييمك</div>
-              <div class="rating-hint">1 = سيئة جدًا · 5 = ممتازة</div>
-            </div>
-          </section>
-
-          <section class="step" data-panel="adaptive">
-            <div class="step-kicker" id="adaptiveKicker">تفاصيل التجربة</div>
-            <h2 class="step-title" id="adaptiveTitle">وش أكثر شيء أعجبك؟</h2>
-            <p class="step-help" id="adaptiveHelp">اختر كل الأشياء اللي تنطبق على تجربتك.</p>
-
-            <div class="adaptive-banner" id="adaptiveBanner">
-              <div class="adaptive-icon" id="adaptiveIcon">💙</div>
-              <div>
-                <b id="adaptiveBannerTitle">سعدنا إن تجربتك كانت جميلة.</b>
-                <span id="adaptiveBannerText">رأيك يساعدنا نعرف الأشياء اللي لازم نستمر عليها.</span>
-              </div>
-            </div>
-
-            <div class="choice-grid" id="adaptiveChoices"></div>
-          </section>
-
-          <section class="step" data-panel="details">
-            <div class="step-kicker">تحديد فرصة التحسين</div>
-            <h2 class="step-title">ساعدنا نعرف وين نقدر نتحسن</h2>
-            <p class="step-help">ثلاث إجابات سريعة فقط عن الخدمة اللي تمت لك.</p>
-
-            <div class="detail-list">
-              <div class="detail-card">
-                <h3>التواصل واحترافية الفريق</h3>
-                <div class="mood-scale" data-question="communication"></div>
-              </div>
-
-              <div class="detail-card">
-                <h3>جودة العمل المنفذ</h3>
-                <div class="mood-scale" data-question="quality"></div>
-              </div>
-
-              <div class="detail-card">
-                <h3>الالتزام بالموعد</h3>
-                <div class="mood-scale" data-question="punctuality"></div>
-              </div>
-            </div>
-          </section>
-
-          <section class="step" data-panel="final">
-            <div class="step-kicker">آخر خطوة</div>
-            <h2 class="step-title">هل تنصح ببيت الإباء؟</h2>
-            <p class="step-help">من 0 إلى 10، قد إيش ممكن تنصح بالتعامل معنا لأحد من أهلك أو أصدقائك؟</p>
-
-            <div class="nps-wrap">
-              <div class="nps-copy"><span>غير محتمل</span><span>محتمل جدًا</span></div>
-              <div class="nps-grid" id="npsGrid"></div>
-            </div>
-
-            <div class="comment-wrap">
-              <div class="comment-label">
-                <b>في شيء تحب تقوله لنا؟</b>
-                <span>اختياري</span>
-              </div>
-              <textarea id="comment" maxlength="500" placeholder="ملاحظتك توصل مباشرة لفريق تجربة العملاء..."></textarea>
-              <div class="counter"><span id="count">0</span> / 500</div>
-            </div>
-
-            <label class="callback-card" id="callbackCard">
-              <input type="checkbox" id="callbackRequest">
-              <span>
-                <b>أرغب أن يتم التواصل معي</b>
-                <span>سنسجل طلب متابعة مرتبط بطلب الخدمة الحالي.</span>
-              </span>
-            </label>
-          </section>
+        <div class="form-body" id="formBody">
+          <div class="step-host" id="stepHost" aria-live="polite"></div>
 
           <div class="action-bar" id="actionBar">
-            <button class="btn btn-secondary" id="prev" type="button" style="visibility:hidden">السابق</button>
-            <button class="btn btn-primary" id="next" type="button" disabled>التالي ←</button>
+            <button class="btn btn-secondary" id="prev" type="button">السابق</button>
+            <button class="btn btn-ghost hidden" id="skip" type="button">تخطي</button>
+            <button class="btn btn-primary" id="next" type="button">التالي ←</button>
           </div>
         </div>
       </article>
 
-      <p class="privacy-note">يستخدم هذا التقييم لتحسين جودة خدمات ما بعد البيع، وترتبط الإجابة بطلب الخدمة فقط لأغراض المتابعة والتحليل.</p>
+      <p class="privacy-note">
+        يتم استخدام تقييمك لتحسين جودة خدمات ما بعد البيع، ولن يتم نشر بياناتك الشخصية. المرفقات والملاحظات في هذا النموذج التجريبي لا تُرسل إلى خادم فعلي.
+      </p>
     </main>
   </section>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <script src="assets/js/survey.js" defer></script>
 </body>
 </html>
