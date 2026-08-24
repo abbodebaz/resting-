@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03384c">
+  <title>بيت الإباء | التقارير</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+</head>
+<body>
+  <section class="admin">
+    <aside class="sidebar">
+      <div class="side-logo">
+        <img class="logo" src="https://seeklogo.com/images/B/bayt-alebaa-logo-796478BBCD-seeklogo.com.png" alt="بيت الإباء">
+      </div>
+
+      <div class="product">
+        <strong>تجربة ما بعد البيع</strong>
+        <small>Customer Experience</small>
+      </div>
+
+      <div class="nav">
+        <a class="on" href="reports.html">لوحة التقارير</a>
+        <a href="responses.html">إجابات العملاء <span class="num">273</span></a>
+      </div>
+
+      <div class="side-user">
+        مدير تجربة العملاء<br>
+        <span style="color:#9fbfc9">Odoo Integration Demo</span>
+      </div>
+    </aside>
+
+    <div class="page-tools">
+      <a class="page-home" href="index.html">← مركز المحاكاة</a>
+    </div>
+
+    <main class="main">
+      <div class="top">
+        <div>
+          <h1>لوحة تجربة العملاء</h1>
+          <p>صورة تنفيذية لأداء خدمات ما بعد البيع — آخر 30 يوم.</p>
+        </div>
+
+        <div class="filters">
+          <select>
+            <option>آخر 30 يوم</option>
+            <option>آخر 90 يوم</option>
+          </select>
+          <select>
+            <option>كل المدن</option>
+            <option>جدة</option>
+            <option>الرياض</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><small>CSAT</small><strong>88.4%</strong><em>↑ 3.1%</em></div>
+        <div class="kpi"><small>متوسط التقييم</small><strong>4.52 / 5</strong><em>↑ 0.18</em></div>
+        <div class="kpi"><small>معدل الاستجابة</small><strong>34%</strong><em>↑ 5.2%</em></div>
+        <div class="kpi"><small>حالات حرجة</small><strong>6</strong><em style="color:var(--bad)">تحتاج تدخل</em></div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>اتجاه رضا العملاء</h2>
+            <span class="pill good">تحسن مستمر</span>
+          </div>
+
+          <div class="linechart">
+            <svg viewBox="0 0 760 235" preserveAspectRatio="none" aria-label="اتجاه رضا العملاء">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#03384c" stop-opacity=".2"/>
+                  <stop offset="1" stop-color="#03384c" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line class="gridline" x1="18" y1="35" x2="742" y2="35"/>
+              <line class="gridline" x1="18" y1="105" x2="742" y2="105"/>
+              <line class="gridline" x1="18" y1="175" x2="742" y2="175"/>
+              <path class="area" d="M18 172 L78 155 L138 160 L198 128 L258 139 L318 111 L378 98 L438 119 L498 87 L558 103 L618 70 L678 82 L742 94 L742 210 L18 210 Z"/>
+              <path class="line" d="M18 172 L78 155 L138 160 L198 128 L258 139 L318 111 L378 98 L438 119 L498 87 L558 103 L618 70 L678 82 L742 94"/>
+              <circle class="dotc" cx="198" cy="128" r="4"/>
+              <circle class="dotc" cx="378" cy="98" r="4"/>
+              <circle class="dotc" cx="618" cy="70" r="4"/>
+              <circle class="dotc" cx="742" cy="94" r="4"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>الأداء حسب المدينة</h2>
+            <span class="pill">4 مدن</span>
+          </div>
+
+          <div class="bars">
+            <div class="barrow"><span>مكة</span><div class="track"><div class="fill" style="width:94%"></div></div><b>4.7</b></div>
+            <div class="barrow"><span>الدمام</span><div class="track"><div class="fill" style="width:92%"></div></div><b>4.6</b></div>
+            <div class="barrow"><span>الرياض</span><div class="track"><div class="fill" style="width:90%"></div></div><b>4.5</b></div>
+            <div class="barrow"><span>جدة</span><div class="track"><div class="fill" style="width:86%"></div></div><b>4.3</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>أكثر أسباب عدم الرضا</h2>
+            <span class="pill warn">من التقييمات المنخفضة</span>
+          </div>
+
+          <div class="reasons">
+            <div class="reason-card"><strong>38%</strong><span>التأخر عن الموعد</span></div>
+            <div class="reason-card"><strong>24%</strong><span>جودة التركيب</span></div>
+            <div class="reason-card"><strong>19%</strong><span>التواصل مع العميل</span></div>
+            <div class="reason-card"><strong>11%</strong><span>عدم حل المشكلة</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>تنبيهات ذكية</h2>
+            <span class="pill">AI Insights</span>
+          </div>
+
+          <div class="insights">
+            <div class="insight">🔴 <b>جدة — فريق 02:</b> انخفاض الالتزام بالمواعيد 14% خلال أسبوعين.</div>
+            <div class="insight">🟠 <b>التركيب:</b> التأخير يمثل 42% من الشكاوى الأخيرة.</div>
+            <div class="insight">🟢 <b>الصيانة:</b> تحسن متوسط الرضا من 4.1 إلى 4.6.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</body>
+</html>
