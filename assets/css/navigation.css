@@ -1,0 +1,46 @@
+.page-tools{
+  max-width:1450px;
+  margin:0 auto;
+  padding:16px 28px 0;
+  display:flex;
+  justify-content:flex-start;
+}
+
+.page-home{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:9px 13px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  color:var(--b);
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.page-home:hover{
+  transform:translateY(-1px);
+  border-color:#9ab9c4;
+}
+
+.survey .page-tools{
+  max-width:760px;
+  padding:0 5px 12px;
+}
+
+.admin .page-tools{
+  padding-right:28px;
+}
+
+@media(max-width:900px){
+  .page-tools,
+  .admin .page-tools{
+    padding:12px 14px 0;
+  }
+  .survey .page-tools{
+    padding:0 0 10px;
+  }
+}
