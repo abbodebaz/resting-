@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03384c">
+  <title>بيت الإباء | إجابات العملاء</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+</head>
+<body>
+  <section class="admin">
+    <aside class="sidebar">
+      <div class="side-logo">
+        <img class="logo" src="https://seeklogo.com/images/B/bayt-alebaa-logo-796478BBCD-seeklogo.com.png" alt="بيت الإباء">
+      </div>
+
+      <div class="product">
+        <strong>تجربة ما بعد البيع</strong>
+        <small>Customer Experience</small>
+      </div>
+
+      <div class="nav">
+        <a href="reports.html">لوحة التقارير</a>
+        <a class="on" href="responses.html">إجابات العملاء <span class="num">273</span></a>
+      </div>
+
+      <div class="side-user">
+        مدير تجربة العملاء<br>
+        <span style="color:#9fbfc9">Odoo Integration Demo</span>
+      </div>
+    </aside>
+
+    <div class="page-tools">
+      <a class="page-home" href="index.html">← مركز المحاكاة</a>
+    </div>
+
+    <main class="main">
+      <div class="top">
+        <div>
+          <h1>إجابات العملاء</h1>
+          <p>كل تقييم مرتبط بالطلب، المدينة، نوع الخدمة والفريق.</p>
+        </div>
+        <span class="pill">آخر تحديث: الآن</span>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><small>إجمالي الإجابات</small><strong>1,284</strong><em>↑ 12% هذا الشهر</em></div>
+        <div class="kpi"><small>متوسط التقييم</small><strong>4.52</strong><em>↑ 0.18 نقطة</em></div>
+        <div class="kpi"><small>Response Rate</small><strong>34%</strong><em>↑ 5.2%</em></div>
+        <div class="kpi"><small>تحتاج متابعة</small><strong>18</strong><em style="color:var(--bad)">6 حالات حرجة</em></div>
+      </div>
+
+      <div class="filters" style="margin-bottom:12px">
+        <input id="search" placeholder="بحث بالعميل أو الطلب">
+        <select id="city">
+          <option value="">كل المدن</option>
+          <option>جدة</option>
+          <option>الرياض</option>
+          <option>الدمام</option>
+          <option>مكة</option>
+        </select>
+        <select id="service">
+          <option value="">كل الخدمات</option>
+          <option>تركيب</option>
+          <option>توصيل</option>
+          <option>صيانة</option>
+        </select>
+        <select id="rating">
+          <option value="">كل التقييمات</option>
+          <option value="5">5 نجوم</option>
+          <option value="4">4 نجوم</option>
+          <option value="low">1–2 نجمة</option>
+        </select>
+      </div>
+
+      <div class="response-layout">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>آخر الإجابات</h2>
+            <span id="resultCount" class="pill">8 إجابات تجريبية</span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>العميل</th>
+                  <th>الخدمة</th>
+                  <th>المدينة</th>
+                  <th>الفريق</th>
+                  <th>التقييم</th>
+                  <th>الحالة</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+
+          <div class="mobile-list" id="mobileList"></div>
+        </div>
+
+        <div class="panel detail" id="detail">
+          <div style="text-align:center;padding:130px 20px;color:var(--muted)">اختر إجابة لعرض تفاصيلها</div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <script src="assets/js/responses.js" defer></script>
+</body>
+</html>
